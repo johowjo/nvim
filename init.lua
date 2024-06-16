@@ -29,3 +29,5 @@ vim.cmd.colorscheme("kanagawa-wave")
 -- vim.cmd.colorscheme("icerberg")
 -- vim.cmd.colorscheme("tokyonight")
 -- vim.cmd("let g:tex_flavor = 'latex'")
+--
+--
