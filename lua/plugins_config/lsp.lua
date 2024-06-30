@@ -80,5 +80,5 @@ lspconfig.rust_analyzer.setup({
 	},
 })
 
--- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
+-- vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
+-- vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})

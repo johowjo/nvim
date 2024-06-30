@@ -9,4 +9,4 @@ null_ls.setup({
     null_ls.builtins.formatting.black,
   },
 })
-vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})
+-- vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})

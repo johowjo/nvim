@@ -15,7 +15,6 @@ dashboard.section.buttons.val = {
   dashboard.button("<space>s r", "  Recently Used Files", ":Telescope oldfiles<CR>"),
   dashboard.button("<space>s t", "  Find Word", ":Telescope live_grep<CR>"),
   dashboard.button("<space>L c", "  Configuration", ":edit /Users/howardliao/.config/nvim/ <CR>"),
-  -- dashboard.button("<space>L c", "  Configuration", ":!cd ~/.config/nvim/ <CR>"),
   dashboard.button("t", "  Terminal", ":term<CR>"),
   dashboard.button("<space>L z", "  Lazy", ":Lazy<CR>"),
 }

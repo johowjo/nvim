@@ -1,14 +1,19 @@
 vim.cmd("syntax enable")
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set rnu")
-vim.cmd("set shiftwidth=2")
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.rnu = true
+
 vim.cmd(":au BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp")
 vim.cmd(":au BufNewFile *.html 0r ~/.config/nvim/templates/skeleton.html")
 vim.cmd(":au BufNewFile *.tex 0r ~/.config/nvim/templates/skeleton.tex")
 vim.cmd("highlight link @lsp.type.macro Macro")
-vim.cmd("let g:tex_flavor = 'latex'")
+-- vim.cmd("let g:tex_flavor = 'latex'")
+vim.g.tex_flavor = "latex"
+vim.g.mapleader = " "
+-- vim.cmd("let g:rust_recommended_style = 0")
+-- vim.cmd("let g:python_indent = 0")
 
 vim.lsp.set_log_level("off")
 
@@ -18,10 +23,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufReadPost" }, {
 	end,
 })
 
-function OpenTerm()
-	vim.cmd(":term")
-	vim.fn.feedkeys("i")
-end
+-- function OpenTerm()
+-- 	vim.cmd(":term")
+-- 	vim.fn.feedkeys("i")
+-- end
 
 function RunJS()
 	local hint = vim.fn.input("execute with node %/npm start (f/s)? ")
@@ -76,7 +81,7 @@ function CompileRun()
 	end
 end
 
-vim.api.nvim_set_keymap("n", "<C-x>", [[:lua CompileRun()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "C", 'gg"*yG', { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "E", ":Ex<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "T", ":ToggleTerm size=40 direction=vertical<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-x>", [[:lua CompileRun()<CR>]], { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "C", 'gg"*yG', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "E", ":Ex<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "T", ":ToggleTerm size=40 direction=vertical<CR>", { noremap = true, silent = true })

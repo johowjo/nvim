@@ -1,3 +1,4 @@
+-- Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -10,24 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
--- local opts = {}
-
--- require("lazy").setup("plugins")
--- require("lazy").setup({
---   "plugi",
---   "simrat39/rust-tools.nvim",
--- })
--- require("rust-tools")
+-- plugins, setting, keymaps
 require("vim-settings")
 require("plugins")
 require("plugins_config")
-
--- vim.cmd.colorscheme("catppuccin")
--- vim.cmd.colorscheme("material")
+require("keymaps")
+-- colorscheme
 vim.cmd.colorscheme("kanagawa-wave")
--- vim.cmd.colorscheme("icerberg")
--- vim.cmd.colorscheme("tokyonight")
--- vim.cmd("let g:tex_flavor = 'latex'")
---
---
