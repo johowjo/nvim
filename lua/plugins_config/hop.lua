@@ -1,2 +1,2 @@
-local hop = require("hop")
-hop.setup()
+require("hop").setup({
+})

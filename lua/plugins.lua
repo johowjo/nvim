@@ -17,9 +17,15 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		lazy = false,
 	},
-	"nvim-lualine/lualine.nvim",
-	"nvim-tree/nvim-web-devicons",
-	"mbbill/undotree",
+	{
+		"nvim-lualine/lualine.nvim",
+	},
+	-- {
+	-- 	"nvim-tree/nvim-web-devicons",
+	-- },
+	{
+		"mbbill/undotree",
+	},
 	{
 		"numToStr/Comment.nvim",
 		opts = {},
@@ -98,9 +104,9 @@ require("lazy").setup({
 		"akinsho/toggleterm.nvim",
 		confifg = true,
 	},
-  {
-    "hadronized/hop.nvim",
-  }
+	{
+		"hadronized/hop.nvim",
+	},
 	-- {
 	-- 	"folke/noice.nvim",
 	-- 	event = "VeryLazy",
