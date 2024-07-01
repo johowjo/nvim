@@ -17,4 +17,4 @@ require("plugins")
 require("plugins_config")
 require("keymaps")
 -- colorscheme
-vim.cmd.colorscheme("kanagawa-wave")
+vim.cmd.colorscheme("tokyonight")

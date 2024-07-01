@@ -1,15 +1,16 @@
+--basic settings
 vim.cmd("syntax enable")
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.rnu = true
-
+--colorscheme
+vim.cmd("highlight link @lsp.type.macro Macro")
+--buf file with templates
 vim.cmd(":au BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp")
 vim.cmd(":au BufNewFile *.html 0r ~/.config/nvim/templates/skeleton.html")
 vim.cmd(":au BufNewFile *.tex 0r ~/.config/nvim/templates/skeleton.tex")
-vim.cmd("highlight link @lsp.type.macro Macro")
--- vim.cmd("let g:tex_flavor = 'latex'")
 vim.g.tex_flavor = "latex"
 vim.g.mapleader = " "
 -- vim.cmd("let g:rust_recommended_style = 0")
@@ -23,11 +24,6 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufReadPost" }, {
 	end,
 })
 
--- function OpenTerm()
--- 	vim.cmd(":term")
--- 	vim.fn.feedkeys("i")
--- end
-
 function RunJS()
 	local hint = vim.fn.input("execute with node %/npm start (f/s)? ")
 
@@ -38,35 +34,10 @@ function RunJS()
 	end
 end
 
--- function CompileRun()
--- 	vim.cmd(":w") -- Save the current file
---
--- 	local filetype = vim.bo.filetype -- Get the current buffer's filetype
---
--- 	if filetype == "cpp" then
--- 		vim.cmd(":term g++ % && ./a.out")
--- 		vim.fn.feedkeys("i")
--- 	elseif filetype == "javascript" then
--- 		RunJS()
--- 	elseif filetype == "html" then
--- 		vim.cmd(":term open %")
--- 		vim.fn.feedkeys("i")
--- 	elseif filetype == "verilog" then
--- 		vim.cmd(":term iverilog % && ./a.out")
--- 		vim.fn.feedkeys("i")
--- 	elseif filetype == "c" then
--- 		vim.cmd(":term gcc % && ./a.out")
--- 		vim.fn.feedkeys("i")
--- 	elseif filetype == "python" then
--- 		vim.cmd(":term python3 %")
--- 		vim.fn.feedkeys("i")
--- 	end
--- end
-
 function CompileRun()
-	vim.cmd(":w") -- Save the current file
+	vim.cmd(":w")
 
-	local filetype = vim.bo.filetype -- Get the current buffer's filetype
+	local filetype = vim.bo.filetype
 
 	if filetype == "cpp" then
 		vim.cmd(':TermExec cmd="g++ % && ./a.out" size=40 direction=vertical')
@@ -77,11 +48,6 @@ function CompileRun()
 	elseif filetype == "c" then
 		vim.cmd(':TermExec cmd="gcc % && ./a.out" size=40 direction=vertical')
 	elseif filetype == "python" then
-    vim.cmd(':TermExec cmd="python3 %" size=40 direction=vertical')
+		vim.cmd(':TermExec cmd="python3 %" size=40 direction=vertical')
 	end
 end
-
--- vim.api.nvim_set_keymap("n", "<C-x>", [[:lua CompileRun()<CR>]], { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "C", 'gg"*yG', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "E", ":Ex<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "T", ":ToggleTerm size=40 direction=vertical<CR>", { noremap = true, silent = true })
