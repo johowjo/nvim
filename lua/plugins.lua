@@ -55,18 +55,18 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		lazy = false,
-	},
-	{
-		"oahlen/iceberg.nvim",
-		name = "iceberg",
-		priority = 1000,
-		lazy = false,
-	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	lazy = false,
+	-- },
+	-- {
+	-- 	"oahlen/iceberg.nvim",
+	-- 	name = "iceberg",
+	-- 	priority = 1000,
+	-- 	lazy = false,
+	-- },
 	{
 		"rebelot/kanagawa.nvim",
 		name = "kanagawa",
@@ -107,6 +107,18 @@ require("lazy").setup({
 	{
 		"hadronized/hop.nvim",
 	},
+	-- {
+	-- 	"vhyrro/luarocks.nvim",
+	-- 	priority = 1001,
+	-- 	config = true,
+	-- },
+	-- {
+	-- 	"nvim-neorg/neorg",
+	-- 	dependencies = { "luarocks.nvim" },
+	-- 	lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+	-- 	version = "*", -- Pin Neorg to the latest stable release
+	-- 	config = true,
+	-- },
 	-- {
 	-- 	"folke/noice.nvim",
 	-- 	event = "VeryLazy",
