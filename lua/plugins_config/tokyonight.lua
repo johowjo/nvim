@@ -17,7 +17,9 @@ require("tokyonight").setup({
 		hl.DiagnosticUnderlineInfo.underline = true
 		hl.DiagnosticUnderlineHint.undercurl = nil
 		hl.DiagnosticUnderlineHint.underline = true
-    hl["@lsp.type.unresolvedReference"].undercurl = nil
-    hl["@lsp.type.unresolvedReference"].underline = true
+		hl["@lsp.type.unresolvedReference"].undercurl = nil
+		hl["@lsp.type.unresolvedReference"].underline = true
 	end,
 })
+
+vim.cmd.colorscheme("tokyonight")

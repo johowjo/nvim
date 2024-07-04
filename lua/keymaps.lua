@@ -1,8 +1,8 @@
--- system
+--editor
 vim.keymap.set("n", "<C-x>", [[:lua CompileRun()<CR>]], { noremap = true, silent = true })
 vim.keymap.set("n", "C", 'gg"*yG', { noremap = true, silent = true })
 vim.keymap.set("n", "E", ":Ex<CR>", { noremap = true, silent = true })
--- lsp
+--lsp
 vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})

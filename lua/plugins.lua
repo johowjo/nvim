@@ -1,3 +1,16 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
 require("lazy").setup({
 	-- "goolord/alpha-nvim",
 	{
@@ -20,9 +33,6 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 	},
-	-- {
-	-- 	"nvim-tree/nvim-web-devicons",
-	-- },
 	{
 		"mbbill/undotree",
 	},
@@ -55,18 +65,6 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 	},
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	name = "catppuccin",
-	-- 	priority = 1000,
-	-- 	lazy = false,
-	-- },
-	-- {
-	-- 	"oahlen/iceberg.nvim",
-	-- 	name = "iceberg",
-	-- 	priority = 1000,
-	-- 	lazy = false,
-	-- },
 	{
 		"rebelot/kanagawa.nvim",
 		name = "kanagawa",
@@ -107,33 +105,4 @@ require("lazy").setup({
 	{
 		"hadronized/hop.nvim",
 	},
-	-- {
-	-- 	"vhyrro/luarocks.nvim",
-	-- 	priority = 1001,
-	-- 	config = true,
-	-- },
-	-- {
-	-- 	"nvim-neorg/neorg",
-	-- 	dependencies = { "luarocks.nvim" },
-	-- 	lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-	-- 	version = "*", -- Pin Neorg to the latest stable release
-	-- 	config = true,
-	-- },
-	-- {
-	-- 	"folke/noice.nvim",
-	-- 	event = "VeryLazy",
-	-- 	opts = {},
-	-- 	dependencies = {
-	-- 		"MunifTanjim/nui.nvim",
-	-- 		"rcarriga/nvim-notify",
-	-- 	},
-	-- },
-	-- fuck Vimtex
-	-- {
-	-- 	"lervag/vimtex",
-	-- 	lazy = false,
-	-- 	init = function()
-	-- 		-- VimTeX configuration goes here
-	-- 	end,
-	-- },
 })
