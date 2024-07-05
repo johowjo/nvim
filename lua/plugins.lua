@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- "goolord/alpha-nvim",
 	{
 		"hrsh7th/cmp-nvim-lsp",
 		lazy = false,
@@ -97,10 +96,6 @@ require("lazy").setup({
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
-	},
-	{
-		"akinsho/toggleterm.nvim",
-		confifg = true,
 	},
 	{
 		"hadronized/hop.nvim",
