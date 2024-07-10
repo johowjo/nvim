@@ -43,11 +43,7 @@ local lspconfig = require("lspconfig")
 
 lspconfig.clangd.setup({
 	capabilities = capabilities,
-	autostart = true,
 })
-
--- extended
-
 lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 })
