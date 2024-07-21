@@ -65,6 +65,9 @@ lspconfig.texlab.setup({
 lspconfig.pyright.setup({
 	capabilities = capabilities,
 })
+lspconfig.jsonls.setup({
+  capabilities = capabilities,
+})
 lspconfig.rust_analyzer.setup({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(),
 	on_attach = on_attach,
@@ -75,6 +78,3 @@ lspconfig.rust_analyzer.setup({
 		"rust-analyzer",
 	},
 })
-
--- vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
--- vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
