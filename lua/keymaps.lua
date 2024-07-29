@@ -1,7 +1,6 @@
 --editor
 vim.keymap.set("n", "<C-x>", ":lua CompileRun()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "C", 'gg"*yG', { noremap = true, silent = true })
-vim.keymap.set("n", "E", ":Ex<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
 --lsp
@@ -23,6 +22,8 @@ vim.keymap.set("n", "<leader>h1", require("hop").hint_char1, { noremap = true, s
 vim.keymap.set("n", "<leader>h2", require("hop").hint_char2, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>hw", require("hop").hint_words, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>hp", require("hop").hint_patterns, { noremap = true, silent = true })
+--oil
+vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
 
 --function implementation
 -- CompileRun function
