@@ -11,7 +11,7 @@ vim.opt.splitright = true
 vim.g.tex_flavor = "latex"
 vim.g.mapleader = " "
 --no log file
-vim.lsp.set_log_level("off")
+-- vim.lsp.set_log_level("off")
 
 --autocommands
 --buf file with templates

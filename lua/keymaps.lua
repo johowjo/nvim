@@ -46,6 +46,9 @@ function CompileRun()
   elseif filetype == "tex" then
     local command = ":term xelatex " .. path
     vim.cmd(command)
+  elseif filetype == "javascript" then
+    local command = "term node " .. path
+    vim.cmd(command)
   end
   vim.cmd("startinsert")
 end

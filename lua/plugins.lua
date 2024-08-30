@@ -99,4 +99,17 @@ require("lazy").setup({
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  {
+    "akinsho/flutter-tools.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+    config = true,
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = { "java" },
+  },
 })
