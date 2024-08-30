@@ -104,12 +104,15 @@ require("lazy").setup({
     lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim", -- optional for vim.ui.select
+      "stevearc/dressing.nvim",
     },
     config = true,
   },
   {
     "mfussenegger/nvim-jdtls",
     ft = { "java" },
+  },
+  {
+    "ThePrimeagen/harpoon",
   },
 })

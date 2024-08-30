@@ -24,6 +24,9 @@ vim.keymap.set("n", "<leader>hw", require("hop").hint_words, { noremap = true, s
 vim.keymap.set("n", "<leader>hp", require("hop").hint_patterns, { noremap = true, silent = true })
 --oil
 vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
+--harpoon
+vim.keymap.set("n", "<leader>Hm", require("harpoon.mark").add_file, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>Hs", require("harpoon.ui").toggle_quick_menu, { noremap = true, silent = true })
 
 --function implementation
 -- CompileRun function
