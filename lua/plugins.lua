@@ -128,7 +128,7 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<space>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+      { "<space>Lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
   {

@@ -10,6 +10,6 @@ require("lualine").setup({
 		theme = "tokyonight",
 	},
 	sections = {
-		lualine_x = { "encoding", quote, "filetype" },
+		lualine_x = { "encoding", "filetype" },
 	},
 })

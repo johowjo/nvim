@@ -21,10 +21,10 @@ vim.keymap.set("n", "T", function()
   vim.cmd("startinsert")
 end, { noremap = true, silent = true })
 --hop
-vim.keymap.set("n", "<leader>h1", require("hop").hint_char1, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>h2", require("hop").hint_char2, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>hw", require("hop").hint_words, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>hp", require("hop").hint_patterns, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>H1", require("hop").hint_char1, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>H2", require("hop").hint_char2, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>Hw", require("hop").hint_words, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>Hp", require("hop").hint_patterns, { noremap = true, silent = true })
 --oil
 vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
 --harpoon
