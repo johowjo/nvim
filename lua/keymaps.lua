@@ -3,6 +3,9 @@ vim.keymap.set("n", "<C-x>", ":lua CompileRun()<CR>", { noremap = true, silent =
 vim.keymap.set("n", "C", 'gg"*yG', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>N", ":tabnew<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>h", ":tabprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>l", ":tabnext<CR>", { noremap = true, silent = true })
 --lsp
 vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
