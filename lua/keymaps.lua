@@ -30,7 +30,8 @@ vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
 --harpoon
 vim.keymap.set("n", "<leader>Hm", require("harpoon.mark").add_file, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>Hs", require("harpoon.ui").toggle_quick_menu, { noremap = true, silent = true })
-
+--codesnap
+vim.keymap.set("n", "<leader>cc", ":CodeSnap<CR>", { noremap = true, silent = true })
 --function implementation
 -- CompileRun function
 function CompileRun()

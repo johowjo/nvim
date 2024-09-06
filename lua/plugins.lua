@@ -84,6 +84,7 @@ require("lazy").setup({
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    version = "1.28.0",
     lazy = false,
     opts = {
       auto_install = true,
@@ -133,5 +134,6 @@ require("lazy").setup({
   },
   {
     "lewis6991/gitsigns.nvim",
-  }
+  },
+  { "mistricky/codesnap.nvim", build = "make" },
 })
