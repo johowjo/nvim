@@ -55,6 +55,9 @@ function CompileRun()
   elseif filetype == "javascript" then
     local command = "term node " .. path
     vim.cmd(command)
+  elseif filetype == "typescript" or filetype == "typescriptreact" or filetype == "javascriptreact" then
+    local command = "term pnpm dev"
+    vim.cmd(command)
   end
   vim.cmd("startinsert")
 end
