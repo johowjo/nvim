@@ -41,6 +41,17 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lspconfig = require("lspconfig")
 
+require("mason-lspconfig").setup_handlers({
+  function (server_name)
+    if server_name == "tsserver" then
+      server_name = "ts_ls"
+      require("lspconfig")[server_name].setup({
+        capabilities = capabilities,
+      })
+    end
+  end,
+})
+
 lspconfig.clangd.setup({
   capabilities = capabilities,
 })
@@ -50,9 +61,9 @@ lspconfig.lua_ls.setup({
 lspconfig.html.setup({
   capabilities = capabilities,
 })
-lspconfig.tsserver.setup({
-  capabilities = capabilities,
-})
+-- lspconfig.tsserver.setup({
+--   capabilities = capabilities,
+-- })
 lspconfig.cssls.setup({
   capabilities = capabilities,
 })
