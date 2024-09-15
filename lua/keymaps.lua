@@ -25,6 +25,7 @@ vim.keymap.set("n", "<leader>H1", require("hop").hint_char1, { noremap = true, s
 vim.keymap.set("n", "<leader>H2", require("hop").hint_char2, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>Hw", require("hop").hint_words, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>Hp", require("hop").hint_patterns, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>Hl", ":lua HopLine()<CR>", { noremap = true, silent = true })
 --oil
 vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
 --harpoon
@@ -61,4 +62,11 @@ function CompileRun()
     vim.cmd(command)
   end
   vim.cmd("startinsert")
+end
+
+-- customized hop function for in one line
+function HopLine()
+  require("hop").hint_words({
+    current_line_only = true,
+  })
 end
