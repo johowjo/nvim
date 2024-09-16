@@ -37,15 +37,6 @@ require("lazy").setup({
     lazy = false,
   },
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-  },
-  {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -77,14 +68,15 @@ require("lazy").setup({
     priority = 1000,
     lazy = false,
   },
-  "nvimtools/none-ls.nvim",
+  {
+    "nvimtools/none-ls.nvim",
+  },
   {
     "williamboman/mason.nvim",
     lazy = false,
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    version = "1.28.0",
     lazy = false,
     opts = {
       auto_install = true,
@@ -94,20 +86,13 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
     lazy = false,
   },
-  "hadronized/hop.nvim",
+  {
+    "hadronized/hop.nvim",
+  },
   {
     "stevearc/oil.nvim",
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
-  {
-    "akinsho/flutter-tools.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
-    },
-    config = true,
   },
   {
     "mfussenegger/nvim-jdtls",

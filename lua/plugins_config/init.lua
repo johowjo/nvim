@@ -1,6 +1,5 @@
 require("plugins_config.lualine")
 require("plugins_config.none-ls")
-require("plugins_config.neo-tree")
 require("plugins_config.telescope")
 require("plugins_config.treesitter")
 require("plugins_config.lsp")
