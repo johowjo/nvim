@@ -121,4 +121,15 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
   },
   { "mistricky/codesnap.nvim", build = "make" },
+  {
+    {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+}
+  }
 })
