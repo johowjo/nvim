@@ -79,9 +79,6 @@ lspconfig.pyright.setup({
 lspconfig.jsonls.setup({
   capabilities = capabilities,
 })
-lspconfig.lemminx.setup({
-  capabilities = capabilities,
-})
 lspconfig.gopls.setup({
   capabilities = capabilities,
 })
@@ -90,12 +87,8 @@ lspconfig.jdtls.setup({
   filetypes = { "java" },
 })
 lspconfig.rust_analyzer.setup({
-  capabilities = require("cmp_nvim_lsp").default_capabilities(),
-  on_attach = on_attach,
-  cmd = {
-    "rustup",
-    "run",
-    "stable",
-    "rust-analyzer",
-  },
+  capabilities = capabilities,
+})
+lspconfig.asm_lsp.setup({
+  capabilities = capabilities,
 })
