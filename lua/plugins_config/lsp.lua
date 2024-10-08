@@ -4,6 +4,7 @@ require("mason").setup()
 
 -- completions.lua
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/sinps" })
 
 local cmp = require("cmp")
 cmp.setup({
@@ -42,7 +43,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
 require("mason-lspconfig").setup_handlers({
-  function (server_name)
+  function(server_name)
     if server_name == "tsserver" then
       server_name = "ts_ls"
       require("lspconfig")[server_name].setup({
