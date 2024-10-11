@@ -22,6 +22,9 @@
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage[margin=3cm]{geometry}
 \usepackage{amsmath}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\let\mathbb\relax
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \newlength{\tabcont}
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
@@ -36,8 +39,10 @@
 \parindent 0in
 \parskip 12pt
 \geometry{margin=1in, headsep=0.25in}
+\graphicspath{{./}}
 \theoremstyle{definition}
 \newtheorem{thr}{Theorem}
+\newtheorem{lma}{Lemma}
 \newtheorem{defn}{Definition}
 \newtheorem{reg}{Rule}
 \newtheorem{exer}{Exercise}
@@ -49,10 +54,8 @@
 
 \thispagestyle{empty}
 \begin{center}
-  {\LARGE \bf Title}\\
-\end{center}
-\begin{center}
-  {\large \bf subtitle} \\ 
+  {\large \bf TITLE} \\ 
   B12901022 廖冠豪
 \end{center}
 \end{document}
+

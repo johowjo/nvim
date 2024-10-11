@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 2
 vim.opt.rnu = true
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.splitright = true
+vim.g.rust_recommended_style = false
 --globals
 vim.g.tex_flavor = "latex"
 vim.g.mapleader = " "
