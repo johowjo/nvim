@@ -120,7 +120,8 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
   },
-  { "mistricky/codesnap.nvim", build = "make" },
+  -- { "mistricky/codesnap.nvim", build = "make" },
+  { "johowjo/codesnap.nvim", build = "make" },
   {
     {
       "nvim-neo-tree/neo-tree.nvim",

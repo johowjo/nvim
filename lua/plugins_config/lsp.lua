@@ -90,6 +90,3 @@ lspconfig.jdtls.setup({
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
 })
-lspconfig.asm_lsp.setup({
-  capabilities = capabilities,
-})
