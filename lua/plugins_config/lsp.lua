@@ -59,15 +59,15 @@ lspconfig.clangd.setup({
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
 })
-lspconfig.html.setup({
-  capabilities = capabilities,
-})
+-- lspconfig.html.setup({
+--   capabilities = capabilities,
+-- })
 -- lspconfig.tsserver.setup({
 --   capabilities = capabilities,
 -- })
-lspconfig.cssls.setup({
-  capabilities = capabilities,
-})
+-- lspconfig.cssls.setup({
+--   capabilities = capabilities,
+-- })
 lspconfig.eslint.setup({
   capabilities = capabilities,
 })
@@ -77,16 +77,16 @@ lspconfig.texlab.setup({
 lspconfig.pyright.setup({
   capabilities = capabilities,
 })
-lspconfig.jsonls.setup({
-  capabilities = capabilities,
-})
-lspconfig.gopls.setup({
-  capabilities = capabilities,
-})
-lspconfig.jdtls.setup({
-  capabilities = capabilities,
-  filetypes = { "java" },
-})
+-- lspconfig.jsonls.setup({
+--   capabilities = capabilities,
+-- })
+-- lspconfig.gopls.setup({
+--   capabilities = capabilities,
+-- })
+-- lspconfig.jdtls.setup({
+--   capabilities = capabilities,
+--   filetypes = { "java" },
+-- })
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
 })
