@@ -90,3 +90,6 @@ lspconfig.pyright.setup({
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
 })
+lspconfig.cmake.setup({
+  capabilities = capabilities,
+})
