@@ -15,6 +15,4 @@ vim.g.mapleader = " "
 
 --autocommands
 --buf file with templates
-vim.cmd(":au BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp")
-vim.cmd(":au BufNewFile *.html 0r ~/.config/nvim/templates/skeleton.html")
 vim.cmd(":au BufNewFile *.tex 0r ~/.config/nvim/templates/skeleton.tex")
