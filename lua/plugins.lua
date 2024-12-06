@@ -30,7 +30,7 @@ require("lazy").setup({
     lazy = false,
   },
   "nvim-lualine/lualine.nvim",
-  "mbbill/undotree",
+  -- "mbbill/undotree",
   {
     "numToStr/Comment.nvim",
     opts = {},
@@ -94,10 +94,10 @@ require("lazy").setup({
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  {
-    "mfussenegger/nvim-jdtls",
-    ft = { "java" },
-  },
+  -- {
+  --   "mfussenegger/nvim-jdtls",
+  --   ft = { "java" },
+  -- },
   {
     "ThePrimeagen/harpoon",
   },
@@ -121,18 +121,18 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
   },
   -- { "mistricky/codesnap.nvim", build = "make" },
-  { "johowjo/codesnap.nvim", build = "make" },
-  {
-    {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
-      },
-    },
-  },
+  -- { "johowjo/codesnap.nvim",                     build = "make" },
+  -- {
+  --   {
+  --     "nvim-neo-tree/neo-tree.nvim",
+  --     branch = "v3.x",
+  --     dependencies = {
+  --       "nvim-lua/plenary.nvim",
+  --       "nvim-tree/nvim-web-devicons",
+  --       "MunifTanjim/nui.nvim",
+  --     },
+  --   },
+  -- },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
