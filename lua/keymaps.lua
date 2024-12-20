@@ -6,10 +6,19 @@ vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>N", ":tabnew<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>h", ":tabprevious<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>l", ":tabnext<CR>", { noremap = true, silent = true })
+--term
+-- vim.keymap.set("t", "<esc>", "CTRL_\_CTRL_N", { noremap = true, silent = true })
 --lsp
 vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})
+--luasnip
+vim.api.nvim_set_keymap("s", "<Tab>", ":lua require'luasnip'.jump(1)<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<Tab>", ":lua require'luasnip'.jump(1)<CR>", { silent = true, noremap = true })
+
+vim.api.nvim_set_keymap("s", "<S-Tab>", ":lua require'luasnip'.jump(-1)<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<S-Tab>", ":lua require'luasnip'.jump(-1)<CR>", { silent = true, noremap = true })
+
 --telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
