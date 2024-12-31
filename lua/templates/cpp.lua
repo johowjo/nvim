@@ -12,6 +12,9 @@ return {
       [[ 
       #pragma GCC Optimize("Ofast")
       #include <iostream>
+      #include <vector>
+      #include <algorithm>
+      #include <cstring>
       #define IOIOOIOIO ios::sync_with_stdio(0); cin.tie(0); cout.tie(0)
       #define int long long
       #define pii pair<int, int>
@@ -28,7 +31,6 @@ return {
       }}
 
       signed main(){{
-      
         IOIOOIOIO;
         int t; cin >> t;
         while(t--) solve();
