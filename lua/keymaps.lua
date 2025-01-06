@@ -10,7 +10,8 @@ vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
 vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
 --term
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-vim.keymap.set("n", "T", ":vnew<CR>:te<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>vt", ":vnew<CR>:te<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ht", ":new<CR>:te<CR>", { noremap = true, silent = true })
 --lsp
 vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
