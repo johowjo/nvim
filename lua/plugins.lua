@@ -120,19 +120,21 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
   },
-  -- { "mistricky/codesnap.nvim", build = "make" },
-  -- { "johowjo/codesnap.nvim",                     build = "make" },
-  -- {
-  --   {
-  --     "nvim-neo-tree/neo-tree.nvim",
-  --     branch = "v3.x",
-  --     dependencies = {
-  --       "nvim-lua/plenary.nvim",
-  --       "nvim-tree/nvim-web-devicons",
-  --       "MunifTanjim/nui.nvim",
-  --     },
-  --   },
-  -- },
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      workspaces = {
+        {
+          name = "Obsidian",
+          path = "~/Obsidian",
+        },
+      },
+    },
+  },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
