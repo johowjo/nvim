@@ -9,10 +9,10 @@ cmp.setup({
   },
   window = {
     completion = cmp.config.window.bordered({
-      border = "shadow",
+      border = "none",
     }),
     documentation = cmp.config.window.bordered({
-      border = "shadow",
+      border = "none",
     }),
   },
   mapping = cmp.mapping.preset.insert({

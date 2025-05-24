@@ -144,4 +144,25 @@ require("lazy").setup({
     end,
     ft = { "markdown" },
   },
+  -- mini
+  {
+    "echasnovski/mini.ai",
+    version = false,
+  },
+  {
+    "echasnovski/mini.surround",
+    version = false,
+  },
+  {
+    "chomosuke/typst-preview.nvim",
+    lazy = false, -- or ft = 'typst'
+    version = "1.*",
+    opts = {},  -- lazy.nvim will implicitly calls `setup {}`
+  },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --   config = function()
+  --     require("nvim-tree").setup()
+  --   end,
+  -- },
 })
