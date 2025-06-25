@@ -33,7 +33,8 @@ vim.keymap.set("n", "<leader>Hp", require("hop").hint_patterns, { noremap = true
 vim.keymap.set("n", "<leader>Hl", ":lua HopLine()<CR>", { noremap = true, silent = true })
 --oil
 vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>nn", ":vnew<CR>:Oil<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>nv", ":vnew<CR>:Oil<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>nh", ":new<CR>:Oil<CR>", { noremap = true, silent = true })
 --harpoon
 vim.keymap.set("n", "<leader>Hm", require("harpoon.mark").add_file, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>Hs", require("harpoon.ui").toggle_quick_menu, { noremap = true, silent = true })

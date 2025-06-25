@@ -145,10 +145,10 @@ require("lazy").setup({
     ft = { "markdown" },
   },
   -- mini
-  {
-    "echasnovski/mini.ai",
-    version = false,
-  },
+  -- {
+  --   "echasnovski/mini.ai",
+  --   version = false,
+  -- },
   {
     "echasnovski/mini.surround",
     version = false,
@@ -159,6 +159,17 @@ require("lazy").setup({
     version = "1.*",
     opts = {},  -- lazy.nvim will implicitly calls `setup {}`
   },
+  -- {
+  --   "nvim-orgmode/orgmode",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     -- Setup orgmode
+  --     require("orgmode").setup({
+  --       org_agenda_files = "~/orgfiles/**/*",
+  --       org_default_notes_file = "~/orgfiles/refile.org",
+  --     })
+  --   end,
+  -- },
   -- {
   --   "nvim-tree/nvim-tree.lua",
   --   config = function()
