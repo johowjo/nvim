@@ -157,8 +157,25 @@ require("lazy").setup({
     "chomosuke/typst-preview.nvim",
     lazy = false, -- or ft = 'typst'
     version = "1.*",
-    opts = {},  -- lazy.nvim will implicitly calls `setup {}`
+    opts = {},    -- lazy.nvim will implicitly calls `setup {}`
   },
+  {
+    'saghen/blink.cmp',
+    version = '1.*',
+    -- `main` is untested, please open a PR if you've confirmed it works as expected
+    dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+    opts = {
+      snippets = { preset = 'luasnip' },
+      -- ensure you have the `snippets` source (enabled by default)
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
+      keymap = {
+        preset = 'default',
+        ['<Enter>'] = { 'select_and_accept' },
+      }
+    }
+  }
   -- {
   --   "nvim-orgmode/orgmode",
   --   event = "VeryLazy",
