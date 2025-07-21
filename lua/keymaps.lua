@@ -1,6 +1,6 @@
 --editor
 vim.keymap.set("n", "<C-x>", ":lua CompileRun()<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "C", 'gg"*yG', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>C", 'gg"*yG', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>N", ":tabnew<CR>", { noremap = true, silent = true })
