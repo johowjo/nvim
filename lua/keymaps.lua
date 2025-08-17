@@ -13,7 +13,6 @@ vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>vt", ":vnew<CR>:te<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>ht", ":new<CR>:te<CR>", { noremap = true, silent = true })
 --lsp
-vim.keymap.set("n", "<C-k>", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
 vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})
 --luasnip
@@ -40,8 +39,6 @@ vim.keymap.set("n", "<leader>Hm", require("harpoon.mark").add_file, { noremap = 
 vim.keymap.set("n", "<leader>Hs", require("harpoon.ui").toggle_quick_menu, { noremap = true, silent = true })
 --codesnap
 vim.keymap.set("n", "<leader>cc", ":CodeSnap<CR>", { noremap = true, silent = true })
---neotree
-vim.keymap.set("n", "<C-b>", ":Neotree toggle focus filesystem left<CR>", { noremap = true, silent = true })
 --function implementation
 -- CompileRun function
 function CompileRun()

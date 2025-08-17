@@ -69,9 +69,6 @@ require("lazy").setup({
     lazy = false,
   },
   {
-    "nvimtools/none-ls.nvim",
-  },
-  {
     "williamboman/mason.nvim",
     lazy = false,
   },
@@ -119,21 +116,6 @@ require("lazy").setup({
   },
   {
     "lewis6991/gitsigns.nvim",
-  },
-  {
-    "epwalsh/obsidian.nvim",
-    version = "*",
-    lazy = true,
-    ft = "markdown",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      workspaces = {
-        {
-          name = "Obsidian",
-          path = "~/Obsidian",
-        },
-      },
-    },
   },
   {
     "iamcco/markdown-preview.nvim",
