@@ -6,8 +6,6 @@ vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>N", ":tabnew<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>h", ":tabprevious<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>l", ":tabnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
-vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
 --term
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>vt", ":vnew<CR>:te<CR>", { noremap = true, silent = true })
