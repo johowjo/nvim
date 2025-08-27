@@ -13,24 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
-    "hrsh7th/cmp-nvim-lsp",
-    lazy = false,
-    config = true,
+    "nvim-lualine/lualine.nvim",
   },
-  {
-    "L3MON4D3/LuaSnip",
-    lazy = false,
-    dependencies = {
-      "saadparwaiz1/cmp_luasnip",
-      "rafamadriz/friendly-snippets",
-    },
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    lazy = false,
-  },
-  "nvim-lualine/lualine.nvim",
-  -- "mbbill/undotree",
   {
     "numToStr/Comment.nvim",
     opts = {},
@@ -41,7 +25,9 @@ require("lazy").setup({
     tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  "nvim-telescope/telescope-ui-select.nvim",
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+  },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -56,11 +42,6 @@ require("lazy").setup({
     name = "kanagawa",
     priority = 1000,
     lazy = false,
-    config = function()
-      require("kanagawa").setup({
-        undercurl = false,
-      })
-    end,
   },
   {
     "folke/tokyonight.nvim",
@@ -71,13 +52,6 @@ require("lazy").setup({
   {
     "williamboman/mason.nvim",
     lazy = false,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    opts = {
-      auto_install = true,
-    },
   },
   {
     "neovim/nvim-lspconfig",
@@ -91,10 +65,6 @@ require("lazy").setup({
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  -- {
-  --   "mfussenegger/nvim-jdtls",
-  --   ft = { "java" },
-  -- },
   {
     "ThePrimeagen/harpoon",
   },
@@ -141,4 +111,17 @@ require("lazy").setup({
     version = "1.*",
     opts = {},    -- lazy.nvim will implicitly calls `setup {}`
   },
+  {
+    'saghen/blink.cmp',
+    version = '1.*',
+    dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+    opts = {
+      keymap = { preset = 'enter' },
+      completion = {
+        documentation = { auto_show = true },
+        trigger = { show_on_backspace = true }
+      },
+      snippets = { preset = 'luasnip' },
+    },
+  }
 })

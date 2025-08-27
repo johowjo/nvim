@@ -1,6 +1,7 @@
 local kanagawa = require("kanagawa")
 
 kanagawa.setup({
+  undercurl = false,
   overrides = function(colors)
     return {
       ErrorMsg = { fg = 12925779 },
