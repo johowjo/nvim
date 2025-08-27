@@ -140,7 +140,6 @@ require("lazy").setup({
       keymap = { preset = 'enter' },
       completion = {
         documentation = { auto_show = true },
-        trigger = { show_on_backspace = true }
       },
       snippets = { preset = 'luasnip' },
     },
