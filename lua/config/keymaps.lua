@@ -1,5 +1,4 @@
 --editor
-vim.keymap.set("n", "<C-x>", ":lua CompileRun()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>C", 'gg"*yG', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
@@ -32,43 +31,9 @@ vim.keymap.set("n", "<leader>Hl", ":lua HopLine()<CR>", { noremap = true, silent
 vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>nv", ":vnew<CR>:Oil<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>nh", ":new<CR>:Oil<CR>", { noremap = true, silent = true })
---harpoon
-vim.keymap.set("n", "<leader>Hm", require("harpoon.mark").add_file, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>Hs", require("harpoon.ui").toggle_quick_menu, { noremap = true, silent = true })
---codesnap
-vim.keymap.set("n", "<leader>cc", ":CodeSnap<CR>", { noremap = true, silent = true })
---function implementation
--- CompileRun function
-function CompileRun()
-  vim.cmd(":w")
-  local filetype = vim.bo.filetype
-  local path = vim.fn.expand("%:p")
-  vim.cmd("vnew")
-  if filetype == "cpp" then
-    local command = ":term g++ " .. path .. " && ./a.out"
-    vim.cmd(command)
-  elseif filetype == "c" then
-    local command = ":term gcc " .. path .. " && ./a.out"
-    vim.cmd(command)
-  elseif filetype == "python" then
-    local command = ":term python3 " .. path
-    vim.cmd(command)
-  elseif filetype == "rust" then
-    vim.cmd("term cargo run")
-  elseif filetype == "tex" then
-    local command = ":term xelatex " .. path
-    vim.cmd(command)
-  elseif filetype == "javascript" then
-    local command = "term node " .. path
-    vim.cmd(command)
-  elseif filetype == "typescript" or filetype == "typescriptreact" or filetype == "javascriptreact" then
-    local command = "term pnpm dev"
-    vim.cmd(command)
-  end
-  vim.cmd("startinsert")
-end
 
--- customized hop function for in one line
+
+-- functionsfunction HopLine()
 function HopLine()
   require("hop").hint_words({
     current_line_only = true,
