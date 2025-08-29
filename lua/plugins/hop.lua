@@ -1,4 +1,4 @@
 return {
-  "hadronized/hop.nvim",
+  "smoka7/hop.nvim",
   opts = {},
 }

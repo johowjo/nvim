@@ -1,41 +1,38 @@
---editor
-vim.keymap.set("n", "<leader>C", 'gg"*yG', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>o", "o<Esc>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>O", "O<Esc>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>N", ":tabnew<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>h", ":tabprevious<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>l", ":tabnext<CR>", { noremap = true, silent = true })
---term
-vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>vt", ":vnew<CR>:te<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ht", ":new<CR>:te<CR>", { noremap = true, silent = true })
---lsp
-vim.keymap.set("n", "<C-d>", vim.diagnostic.open_float, {})
-vim.keymap.set("n", "<C-f>", vim.lsp.buf.format, {})
---luasnip
-vim.api.nvim_set_keymap("s", "<Tab>", ":lua require'luasnip'.jump(1)<CR>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<Tab>", ":lua require'luasnip'.jump(1)<CR>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("s", "<S-Tab>", ":lua require'luasnip'.jump(-1)<CR>", { silent = true, noremap = true })
-vim.api.nvim_set_keymap("n", "<S-Tab>", ":lua require'luasnip'.jump(-1)<CR>", { silent = true, noremap = true })
---telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-vim.keymap.set("n", "<C-o>", builtin.live_grep, {})
---hop
-vim.keymap.set("n", "<leader>H1", require("hop").hint_char1, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>H2", require("hop").hint_char2, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>Hw", require("hop").hint_words, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>Hp", require("hop").hint_patterns, { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>Hl", ":lua HopLine()<CR>", { noremap = true, silent = true })
---oil
-vim.keymap.set("n", "E", ":Oil<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>nv", ":vnew<CR>:Oil<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>nh", ":new<CR>:Oil<CR>", { noremap = true, silent = true })
-
-
--- functionsfunction HopLine()
-function HopLine()
+-- functions
+local hintline = function()
   require("hop").hint_words({
     current_line_only = true,
   })
 end
+
+local map = function(mode, lhs, rhs)
+  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
+end
+--editor
+map("n", "<leader>C", 'gg"*yG')
+map("n", "<leader>o", "o<Esc>")
+map("n", "<leader>O", "O<Esc>")
+map("n", "<leader>N", ":tabnew<CR>")
+map("n", "<leader>h", ":tabprevious<CR>")
+map("n", "<leader>l", ":tabnext<CR>")
+--term
+map("t", "<esc>", "<C-\\><C-n>")
+map("n", "<leader>vt", ":vnew<CR>:te<CR>")
+map("n", "<leader>ht", ":new<CR>:te<CR>")
+--lsp
+map("n", "<C-d>", vim.diagnostic.open_float)
+map("n", "<C-f>", vim.lsp.buf.format)
+--telescope
+local builtin = require("telescope.builtin")
+map("n", "<C-p>", builtin.find_files)
+map("n", "<C-o>", builtin.live_grep)
+--hop
+map("n", "<leader>H1", require("hop").hint_char1)
+map("n", "<leader>H2", require("hop").hint_char2)
+map("n", "<leader>Hw", require("hop").hint_words)
+map("n", "<leader>Hp", require("hop").hint_patterns)
+map("n", "<leader>Hl", hintline)
+--oil
+map("n", "E", ":Oil<CR>")
+map("n", "<leader>nv", ":vnew<CR>:Oil<CR>")
+map("n", "<leader>nh", ":new<CR>:Oil<CR>")

@@ -9,6 +9,7 @@ vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.splitright = true
 vim.opt.cul = true
 vim.opt.gcr = "n-v-c-sm-i-t:block,ci-ve:ver25,r-cr-o:hor20"
+vim.opt.undofile = true
 --globals
 vim.g.tex_flavor = "latex"
 vim.g.mapleader = " "
