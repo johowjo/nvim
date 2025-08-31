@@ -1,12 +1,12 @@
 -- functions
 local hintline = function()
-	require("hop").hint_words({
-		current_line_only = true,
-	})
+  require("hop").hint_words({
+    current_line_only = true,
+  })
 end
 
 local map = function(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
+  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
 end
 --editor
 map("n", "<leader>C", 'gg"*yG')
