@@ -1,12 +1,12 @@
 -- functions
 local hintline = function()
-  require("hop").hint_words({
-    current_line_only = true,
-  })
+	require("hop").hint_words({
+		current_line_only = true,
+	})
 end
 
 local map = function(mode, lhs, rhs)
-  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
+	vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
 end
 --editor
 map("n", "<leader>C", 'gg"*yG')
@@ -21,7 +21,7 @@ map("n", "<leader>vt", ":vnew<CR>:te<CR>")
 map("n", "<leader>ht", ":new<CR>:te<CR>")
 --lsp
 map("n", "<C-d>", vim.diagnostic.open_float)
-map("n", "<C-f>", vim.lsp.buf.format)
+map("n", "<C-f>", require("conform").format)
 --telescope
 local builtin = require("telescope.builtin")
 map("n", "<C-p>", builtin.find_files)
