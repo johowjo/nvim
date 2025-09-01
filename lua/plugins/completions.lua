@@ -1,8 +1,8 @@
 return {
   {
-    'saghen/blink.cmp',
-    version = '1.*',
-    dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
+    "saghen/blink.cmp",
+    version = "1.*",
+    dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
     opts = {
       sources = {
         default = { "lazydev", "lsp", "path", "snippets", "buffer" },
@@ -15,7 +15,7 @@ return {
         },
       },
       keymap = {
-        preset = 'enter',
+        preset = "enter",
         ["<Tab>"] = {
           function(cmp)
             return cmp.select_next()
@@ -32,14 +32,14 @@ return {
         },
       },
       completion = {
-        documentation = { auto_show = true },
+        documentation = { auto_show = true, window = { border = "single" } },
       },
-      snippets = { preset = 'luasnip' },
+      snippets = { preset = "luasnip" },
     },
     config = function(_, opts)
       require("blink.cmp").setup(opts)
       require("luasnip.loaders.from_vscode").lazy_load()
       require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets/" })
-    end
+    end,
   },
 }

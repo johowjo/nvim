@@ -21,6 +21,14 @@ map("n", "<leader>vt", ":vnew<CR>:te<CR>")
 map("n", "<leader>ht", ":new<CR>:te<CR>")
 --lsp
 map("n", "<C-d>", vim.diagnostic.open_float)
+map("n", "K", function()
+  vim.lsp.buf.hover({
+    border = "single",
+    max_height = 20,
+    max_width = 130,
+    close_events = { "CursorMoved", "BufLeave", "WinLeave", "LSPDetach" },
+  })
+end)
 map("n", "<C-f>", require("conform").format)
 --telescope
 local builtin = require("telescope.builtin")
