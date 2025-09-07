@@ -7,7 +7,8 @@ return {
       rust = { "rustfmt", lsp_format = "fallback" },
       javascript = { "prettier", stop_after_first = true },
       cpp = { "clang-format" },
-      typst = { "prettypst", "typstlyle" }
+      typst = { "prettypst", "typstlyle" },
+      toml = { "taplo" }
     },
   },
 }
