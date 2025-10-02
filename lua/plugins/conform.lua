@@ -1,14 +1,18 @@
 return {
-  'stevearc/conform.nvim',
+  "stevearc/conform.nvim",
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
       python = { "black" },
       rust = { "rustfmt", lsp_format = "fallback" },
-      javascript = { "prettier", stop_after_first = true },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
       cpp = { "clang-format" },
       typst = { "prettypst", "typstlyle" },
-      toml = { "taplo" }
+      toml = { "taplo" },
+      html = { "prettier" },
+      css = { "prettier" },
     },
   },
 }

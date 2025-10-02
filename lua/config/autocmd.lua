@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_create_autocmd("BufUnload", {
       buffer = args.buf,
       once = true,
-      callback = function(ev)
+      callback = function(_)
         vim.cmd("TypstPreviewStop")
       end,
     })
