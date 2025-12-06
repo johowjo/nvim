@@ -2,21 +2,21 @@ return {
   {
     "williamboman/mason.nvim",
     lazy = false,
-    opts = {}
+    opts = {},
   },
   {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      local servers = { 'lua_ls', 'clangd', 'ts_ls', 'rust_analyzer', 'eslint', 'pyright' , 'tinymist'}
+      local servers = { "lua_ls", "clangd", "ts_ls", "rust_analyzer", "eslint", "pyright", "tinymist", "texlab" }
 
       for _, server in ipairs(servers) do
         vim.lsp.config(server, {
-          capabilities = require('blink.cmp').get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
+          capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities()),
         })
         vim.lsp.enable(server)
       end
-    end
+    end,
   },
   {
     "folke/lazydev.nvim",
@@ -26,5 +26,5 @@ return {
         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
       },
     },
-  }
+  },
 }
