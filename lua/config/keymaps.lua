@@ -12,7 +12,13 @@ local float_window_config = {
   border = "single",
   max_height = 20,
   max_width = 130,
-  close_events = { "BufEnter", "CursorMoved", "ExitPre", "ModeChanged", "WinEnter" },
+  close_events = {
+    "BufEnter",
+    "CursorMoved",
+    "ExitPre",
+    "ModeChanged",
+    "WinEnter",
+  },
 }
 --editor
 map("n", "<leader>C", 'gg"*yG')

@@ -1,5 +1,5 @@
 return {
-  pick_buffers = function ()
+  pick_buffers = function()
     local buffers = vim.api.nvim_list_bufs()
     local list = {}
     local bufnrs = {}
@@ -27,6 +27,6 @@ return {
       end
     end
 
-    require("custom.picker").pick{list=list, callback=callback}
-  end
+    require("custom.picker").pick({ list = list, callback = callback })
+  end,
 }

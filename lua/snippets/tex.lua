@@ -59,8 +59,7 @@ return {
       "  B12901022 廖冠豪",
       "\\end{center}",
       "",
-      "\\end{document}"
+      "\\end{document}",
     }),
   }),
 }
-
