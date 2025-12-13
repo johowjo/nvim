@@ -9,40 +9,39 @@ return {
     lazy = false,
     config = function()
       local servers = {
-        "lua_ls",
-        "clangd",
-        "ts_ls",
-        "rust_analyzer",
-        "eslint",
-        "pyright",
-        "tinymist",
-        "texlab",
-      }
-
-      local cmd = {
-        ["clangd"] = {
-          "clangd",
-          "--completion-style=detailed",
-          "--header-insertion=never",
+        { name = "lua_ls" },
+        {
+          name = "clangd",
+          cmd = {
+            "clangd",
+            "--completion-style=detailed",
+            "--header-insertion=never",
+          },
         },
+        { name = "ts_ls" },
+        { name = "rust_analyzer" },
+        { name = "eslint" },
+        { name = "pyright" },
+        { name = "tinymist" },
+        { name = "texlab" },
       }
 
       for _, server in ipairs(servers) do
-        if cmd[server] ~= nil then
-          vim.lsp.config(server, {
+        if server.cmd ~= nil then
+          vim.lsp.config(server.name, {
             capabilities = require("blink.cmp").get_lsp_capabilities(
               vim.lsp.protocol.make_client_capabilities()
             ),
-            cmd = cmd[server],
+            cmd = server.cmd,
           })
         else
-          vim.lsp.config(server, {
+          vim.lsp.config(server.name, {
             capabilities = require("blink.cmp").get_lsp_capabilities(
               vim.lsp.protocol.make_client_capabilities()
             ),
           })
         end
-        vim.lsp.enable(server)
+        vim.lsp.enable(server.name)
       end
     end,
   },
