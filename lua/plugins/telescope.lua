@@ -1,9 +1,10 @@
 return {
-  "nvim-telescope/telescope.nvim",
-  tag = "0.1.5",
+  'nvim-telescope/telescope.nvim',
+  version = '*',
   dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope-ui-select.nvim",
+      'nvim-lua/plenary.nvim',
+      -- optional but recommended
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   opts = {
     defaults = {
@@ -16,14 +17,8 @@ return {
         -- vertical = { width = 0.5 },
       },
     },
-    extensions = {
-      ["ui-select"] = {
-        require("telescope.themes").get_dropdown({}),
-      },
-    },
   },
   config = function(_, opts)
     require("telescope").setup(opts)
-    require("telescope").load_extension("ui-select")
   end,
 }
