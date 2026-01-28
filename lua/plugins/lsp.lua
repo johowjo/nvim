@@ -15,6 +15,7 @@ return {
           cmd = {
             "clangd",
             "--completion-style=detailed",
+            "--function-arg-placeholders=false",
             "--header-insertion=never",
           },
         },
@@ -44,14 +45,5 @@ return {
         vim.lsp.enable(server.name)
       end
     end,
-  },
-  {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    opts = {
-      library = {
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
   },
 }

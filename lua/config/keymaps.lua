@@ -24,11 +24,9 @@ local float_window_config = {
 map("n", "<leader>C", 'gg"*yG')
 map("n", "<leader>o", "o<Esc>")
 map("n", "<leader>O", "O<Esc>")
-map("n", "<leader>Tn", ":tabnew<CR>")
-map("n", "<leader>Th", ":tabprev<CR>")
-map("n", "<leader>Tl", ":tabnext<CR>")
 map("n", "<leader>m", "ma")
 map("n", "<leader>'", "'a")
+map("n", "gB", "<C-t>")
 map("v", "y", '"*y')
 --term
 map("t", "<esc>", "<C-\\><C-n>")
@@ -41,22 +39,13 @@ end)
 map("n", "K", function()
   vim.lsp.buf.hover(float_window_config)
 end)
-map("n", "<C-a>", vim.lsp.buf.code_action)
 map("n", "<C-f>", require("conform").format)
+map("n", "gd", vim.lsp.buf.definition)
+map("n", "gD", vim.lsp.buf.declaration)
 --telescope
 local builtin = require("telescope.builtin")
 map("n", "<C-p>", builtin.find_files)
 map("n", "<C-o>", builtin.live_grep)
---hop
-map("n", "<leader>h1", require("hop").hint_char1)
-map("n", "<leader>h2", require("hop").hint_char2)
-map("n", "<leader>hw", require("hop").hint_words)
-map("n", "<leader>hp", require("hop").hint_patterns)
-map("n", "<leader>hl", function()
-  require("hop").hint_words({
-    current_line_only = true,
-  })
-end)
 --oil
 map("n", "E", ":Oil<CR>")
 map("n", "<leader>nv", ":vnew<CR>:Oil<CR>")
