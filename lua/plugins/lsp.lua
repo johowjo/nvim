@@ -1,10 +1,5 @@
 return {
   {
-    "williamboman/mason.nvim",
-    lazy = false,
-    opts = {},
-  },
-  {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
