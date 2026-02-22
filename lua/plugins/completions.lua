@@ -5,7 +5,7 @@ return {
     dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
     opts = {
       sources = {
-        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        default = { "lsp", "path", "snippets", "buffer" },
         providers = {
           lazydev = {
             name = "LazyDev",

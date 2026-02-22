@@ -50,5 +50,3 @@ map("n", "<C-o>", builtin.live_grep)
 map("n", "E", ":Oil<CR>")
 map("n", "<leader>nv", ":vnew<CR>:Oil<CR>")
 map("n", "<leader>nh", ":new<CR>:Oil<CR>")
--- custom
-map("n", "<leader>bl", require("custom.picks").pick_buffers)
