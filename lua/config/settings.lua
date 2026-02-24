@@ -13,5 +13,3 @@ vim.opt.undofile = true
 --globals
 vim.g.tex_flavor = "latex"
 vim.g.mapleader = " "
---
-vim.cmd("colo koehler")
