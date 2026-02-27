@@ -1,0 +1,7 @@
+require("plugins.autopairs")
+require("plugins.comment")
+require("plugins.conform")
+require("plugins.completions")
+require("plugins.kanagawa")
+require("plugins.nvim-surround")
+require("plugins.treesitter")

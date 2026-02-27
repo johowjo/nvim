@@ -1,5 +1,3 @@
-return {
-  "numToStr/Comment.nvim",
-  opts = {},
-  lazy = false,
-}
+vim.pack.add({
+	{ src = "https://github.com/numToStr/Comment.nvim" },
+})
