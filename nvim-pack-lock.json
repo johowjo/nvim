@@ -24,10 +24,6 @@
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
-    "nvim-lspconfig": {
-      "rev": "f2193125da0bff2e4eae8e0a45e343ec9bca4c72",
-      "src": "https://github.com/neovim/nvim-lspconfig"
-    },
     "nvim-surround": {
       "rev": "ce4ad4a8909d7f4537803c8f09b79e78c49a6cc4",
       "src": "https://github.com/kylechui/nvim-surround"
