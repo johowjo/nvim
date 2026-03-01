@@ -1,6 +1,5 @@
 local servers = {
   require("lsp.clangd"),
-  require("lsp.jdtls"),
   require("lsp.lua_ls"),
   require("lsp.pyright"),
   require("lsp.rust_analyzer"),
